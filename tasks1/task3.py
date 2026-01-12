@@ -37,10 +37,6 @@ print(multiply)
 arr = np.array([100, 200, 300, 400, 500])
 print(arr[[4, 3, 2, 1, 0]])
 
-
-
-
-
 # 2D Array Practice
 
 #9. Let arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]). Extract the first row.
@@ -68,7 +64,6 @@ arr = np.array([
 ])
 print(arr[arr>10])
 
-
 #12. Use advanced indexing to select elements at positions (0,0), (1,1), and (2,2) from the above array.
 arr = np.array([
     [2, 4, 6], 
@@ -90,7 +85,7 @@ arr = np.array([
     [5, 6, 7, 8], 
     [9, 10, 11, 12]
 ])
-
+print(arr[0:2,2:4])
 
 #15. Given arr = np.array([[2, 4], [6, 8], [10, 12]]), multiply only the first column by 10 using broadcasting.
 arr = np.array([
