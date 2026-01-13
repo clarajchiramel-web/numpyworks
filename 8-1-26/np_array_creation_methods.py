@@ -5,7 +5,7 @@
 #np.full((r,c),value) specific value add cheyanamengil
 #np.random.rand(r,c) no need for brackets
 #np.random.randint(low,high,(r,c))for in case of integer
-
+#np.argsort()it used to sort.it gives index value
 import numpy as np
 zeros_array=np.zeros((3,2),dtype="int16")
 print(zeros_array)#[[0 0]
