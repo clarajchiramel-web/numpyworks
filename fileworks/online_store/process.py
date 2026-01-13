@@ -19,22 +19,17 @@ revenue=data[:,0].astype("int")*data[:,6].astype("float")
 total_revenue=np.sum(revenue)
 
 #Find orders with delivery days > 5
-
-
-#Count returned vs non-returned orders
-status=data[:,-1].astype("int")
-orders=np.where(status==0,"Returned","non Returned")
+orders=data[data[:,5].astype("int")>5]
 print(orders)
 
+#Count returned vs non-returned orders
+returned=data[data[:,-1]=="Yes"]
+non_returned=data[data[:,-1]=="No"]
+print("returned=",len(returned),"non returned=",len(non_returned))
+
 #Find average discount per product category
-discounts = data[:, 2].astype(int)
-avg_discount = np.average(discounts)
-print("Average discount:", avg_discount)
+print(np.average(data[:,3:7].astype("int")))
 
 #Create a new column:
 #DeliveryDays ≤ 3 → Fast
 #Else → Normal
-delivery_days=data[:,7].astype("int")
-print(np.where(delivery_days<=3,"fast","normal"))
-
-
